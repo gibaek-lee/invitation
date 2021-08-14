@@ -48,7 +48,7 @@ function appendDim (targetImgElement) {
     width: '100%',
     'background-color': keyColor,
     'z-index': 1,
-    opacity: 0.4
+    opacity: 0.8
   }
   dim.setAttribute(
     'style',
