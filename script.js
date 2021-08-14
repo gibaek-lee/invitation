@@ -1,6 +1,6 @@
 const keyColor = '#a9a9a9'
 const isMobile = validIsMobile()
-const NUM_MORE_IMG = 16
+const NUM_MORE_IMG = 15
 const ACCOUNT_QUERY = '1'
 const INFO_AACOUNTS = [
   '계좌번호',
