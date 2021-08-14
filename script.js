@@ -4,7 +4,7 @@ const NUM_MORE_IMG = 16
 const ACCOUNT_QUERY = '1'
 const INFO_AACOUNTS = [
   '계좌번호',
-  '신한은행 110-154-512570 백미하',
+  '신한은행 110-154-512579 백미하',
   '카카오뱅크 3333-10-0168181 이기백'
 ]
 
