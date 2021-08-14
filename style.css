@@ -51,10 +51,9 @@ section.intro {
 }
 section.intro > p {
   position: absolute;
-  top: 100px;
+  top: 80px;
   width: 100%;
   font-size: 2.3rem;
-  color: var(--root-color-bright);
 }
 section.intro > img {
   margin-top: -200px;

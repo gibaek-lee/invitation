@@ -1,7 +1,12 @@
 const keyColor = '#a9a9a9'
 const isMobile = validIsMobile()
-const NUM_MORE_IMG = 15
+const NUM_MORE_IMG = 16
 const ACCOUNT_QUERY = '1'
+const INFO_AACOUNTS = [
+  '계좌번호',
+  '신한은행 110-154-512570 백미하',
+  '카카오뱅크 3333-10-0168181 이기백'
+]
 
 appendListMorImgs()
 if(window.location.search.indexOf(ACCOUNT_QUERY) !== -1) {
@@ -91,12 +96,7 @@ function appendListMorImgs () {
 
 function addAccountInfo () {
   const accountSectionNode = document.querySelector('.account')
-  const infoDataList = [
-    '계좌번호',
-    '신한은행 110-154-512570 백미하',
-    '카카오뱅크 3333-10-0168181 이기백'
-  ]
-  infoDataList.forEach(data => {
+  INFO_AACOUNTS.forEach(data => {
     const pNode = document.createElement('p')
     pNode.innerText = data
     accountSectionNode.appendChild(pNode)
