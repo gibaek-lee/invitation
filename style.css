@@ -119,6 +119,13 @@ section.images > ul > li > img {
   cursor: pointer;
 }
 
+section.account > p {
+  font-size: 1.6rem;
+}
+section.account > p:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+
 section.map {
   text-align: left;
 }

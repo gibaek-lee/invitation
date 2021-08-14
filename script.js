@@ -3,6 +3,9 @@ const isMobile = validIsMobile()
 const NUM_MORE_IMG = 15
 
 appendListMorImgs()
+if(window.location.search.indexOf('1') !== -1) {
+  addAccountInfo()
+}
 
 document.querySelectorAll('section.images > ul > li').forEach(element => {
   element.addEventListener('click', (event) => {
@@ -83,4 +86,18 @@ function appendListMorImgs () {
     liNode.appendChild(imgNode)
     targetParent.appendChild(liNode)
   }
+}
+
+function addAccountInfo () {
+  const accountSectionNode = document.querySelector('.account')
+  const infoDataList = [
+    '계좌번호',
+    '신한은행 110-154-512570 백미하',
+    '카카오뱅크 3333-10-0168181 이기백'
+  ]
+  infoDataList.forEach(data => {
+    const pNode = document.createElement('p')
+    pNode.innerText = data
+    accountSectionNode.appendChild(pNode)
+  })
 }
