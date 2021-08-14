@@ -1,5 +1,8 @@
 const keyColor = '#a9a9a9'
 const isMobile = validIsMobile()
+const NUM_MORE_IMG = 15
+
+appendListMorImgs()
 
 document.querySelectorAll('section.images > ul > li').forEach(element => {
   element.addEventListener('click', (event) => {
@@ -20,8 +23,8 @@ document.querySelectorAll('section.images > ul > li').forEach(element => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: isMobile ? '100%' : 'auto',
-        height: isMobile ? 'auto' : '100vh',
+        width: 'auto',
+        height: '100vh',
         'z-index': 100,
         'box-shadow': `0px 0px 30px ${keyColor}`
       }
@@ -69,4 +72,15 @@ function validIsMobile(){
 
   return UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null
       || UserAgent.match(/LG|SAMSUNG|Samsung/) != null
+}
+
+function appendListMorImgs () {
+  const targetParent = document.querySelector('#more-imgs')
+  for(let i = 0; i < NUM_MORE_IMG; i++) {
+    const liNode = document.createElement('li')
+    const imgNode = document.createElement('img')
+    imgNode.setAttribute('src', `assets/more/${i + 1}.jpg`)
+    liNode.appendChild(imgNode)
+    targetParent.appendChild(liNode)
+  }
 }
