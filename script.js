@@ -1,9 +1,10 @@
 const keyColor = '#a9a9a9'
 const isMobile = validIsMobile()
 const NUM_MORE_IMG = 15
+const ACCOUNT_QUERY = '1'
 
 appendListMorImgs()
-if(window.location.search.indexOf('1') !== -1) {
+if(window.location.search.indexOf(ACCOUNT_QUERY) !== -1) {
   addAccountInfo()
 }
 
