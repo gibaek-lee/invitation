@@ -72,8 +72,15 @@ section.description > p {
   margin-top: var(--root-sub-seperation);
   font-size: 1.4rem;
 }
-section.description > img {
+section.description > div.image-cover {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
   margin-top: var(--root-seperation);
+}
+
+section.description > div.image-cover > img {
+  margin-top: -90px;
 }
 section.description > article {
   margin: 0 30px;
@@ -109,19 +116,20 @@ section.images > p {
   margin-bottom: var(--root-sub-seperation);
 }
 section.images > ul > li {
+  position: relative;
   display: inline-block;
+  width: 40%;
+  height: 250px;
+  overflow: hidden;
 }
 section.images > ul > li > img {
-  height: 200px;
-  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
   cursor: pointer;
-}
-
-section.account > p {
-  font-size: 1.6rem;
-}
-section.account > p:nth-of-type(1) {
-  margin-bottom: 20px;
 }
 
 section.map {
@@ -146,4 +154,13 @@ section.map ul {
 }
 section.map ul > li{
   font-size:1.4rem;
+}
+
+section.account > p {
+  font-size: 1.6rem;
+}
+section.account > p:nth-of-type(1) {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: 2px solid var(--root-color);
 }

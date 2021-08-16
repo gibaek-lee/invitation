@@ -1,7 +1,6 @@
 const keyColor = '#a9a9a9'
 const isMobile = validIsMobile()
-const NUM_MORE_IMG = 15
-const ACCOUNT_QUERY = '1'
+const NUM_MORE_IMG = 4
 const INFO_AACOUNTS = [
   '계좌번호',
   '신한은행 110-154-512579 백미하',
@@ -9,9 +8,7 @@ const INFO_AACOUNTS = [
 ]
 
 appendListMorImgs()
-if(window.location.search.indexOf(ACCOUNT_QUERY) !== -1) {
-  addAccountInfo()
-}
+addAccountInfo()
 
 document.querySelectorAll('section.images > ul > li').forEach(element => {
   element.addEventListener('click', (event) => {
